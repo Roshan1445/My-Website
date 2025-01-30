@@ -3,89 +3,284 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Business</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dipak Fancy & Kirana Stores</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background: linear-gradient(45deg, #87CEEB, #ffffff); /* Sky Blue to White gradient */
+            color: #333;
+        }
+
+        header {
+            background-color: #000000; /* Black background */
+            color: white; /* White text */
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        header .login-profile {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #ffffff;
+            color: #000000;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            border: 1px solid #000000;
+        }
+
+        header .login-profile:hover {
+            background-color: #f1f1f1;
+        }
+
+        main {
+            padding: 20px;
             text-align: center;
         }
-        header {
-            background-color: #4CAF50;
+
+        footer {
+            background-color: #000000; /* Black background */
+            color: white; /* White text */
+            text-align: center;
+            padding: 5px; /* Reduced padding for a smaller footer */
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .button {
+            background-color: #008CBA;
+            border: none;
             color: white;
-            padding: 20px;
-            font-size: 24px;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 2px;
+            cursor: pointer;
+            border-radius: 5px;
         }
-        section {
-            padding: 20px;
+
+        .button:hover {
+            background-color: #005f6b;
         }
-        .cta {
-            background-color: #f4f4f4;
-            padding: 30px;
-            margin: 20px;
+
+        .location, .contact-info, .login-form {
+            margin-top: 30px;
+            text-align: center;
         }
-        .cta button {
-            background-color: #4CAF50;
+
+        .map {
+            width: 100%;
+            height: 300px;
+            border: 0;
+        }
+
+        .image-container {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .image-container img {
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: block;
+            margin: 10px auto;
+        }
+
+        .owner-info {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .input-box {
+            display: block;
+            width: 80%;
+            max-width: 400px;
+            padding: 10px;
+            margin: 10px auto;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .login-button {
+            background-color: #000000;
             color: white;
             padding: 10px 20px;
             border: none;
+            border-radius: 5px;
+            font-size: 18px;
             cursor: pointer;
-            font-size: 16px;
+            margin-top: 10px;
         }
-        .cta button:hover {
-            background-color: #45a049;
-        }
-        footer {
+
+        .login-button:hover {
             background-color: #333;
-            color: white;
-            padding: 10px;
-            position: relative;
-            bottom: 0;
-            width: 100%;
         }
-        .services, .testimonials, .contact {
-            background-color: #e8e8e8;
-            padding: 20px;
-            margin: 20px;
+
+        .input-container {
+            display: none;
+            text-align: center;
+        }
+
+        .blurred {
+            filter: blur(5px);
+            pointer-events: none;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            display: none;
+        }
+
+        /* New styles for the login form */
+        #login-form {
+            display: none;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1000;
+            width: 80%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .input-box {
+            margin-top: 15px;
+        }
+
+        /* Success Message Styles */
+        .success-message {
+            display: none;
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            font-size: 18px;
+            margin-top: 20px;
+            border-radius: 5px;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to Our Business</h1>
-    </header>
-    <section>
-        <h2>About Us</h2>
-        <p>We are a dedicated team committed to providing top-notch services and products to our customers.</p>
-    </section>
-    <section class="services">
-        <h2>Our Services</h2>
-        <ul>
-            <li>Web Development</li>
-            <li>Software Solutions</li>
-            <li>IT Consulting</li>
-            <li>SEO Optimization</li>
-            <li>Cloud Services</li>
-        </ul>
-    </section>
-    <section class="testimonials">
-        <h2>What Our Clients Say</h2>
-        <p>"This company transformed our online presence! Highly recommended." - Client A</p>
-        <p>"Excellent service and support. Our business has grown significantly!" - Client B</p>
-    </section>
-    <section class="cta">
-        <h2>Get Started Today</h2>
-        <p>Join us now and take your business to the next level.</p>
-        <button onclick="alert('Thank you for getting in touch!')">Contact Us</button>
-    </section>
-    <section class="contact">
+
+<header>
+    <h1>Welcome to Dipak Fancy & Kirana Stores</h1>
+
+    <!-- Login Profile Button in Top Right Corner -->
+    <div class="login-profile" onclick="toggleLoginForm()">Login</div>
+</header>
+
+<!-- Overlay for Blur Effect -->
+<div id="overlay" class="overlay"></div>
+
+<!-- Owner Image at the Top -->
+<div class="image-container" id="main-content">
+    <img src="https://lh5.googleusercontent.com/p/AF1QipPNWZN8PFInElBYAper0di9P5fT3XcZaU1mATKL=w203-h270-k-no" alt="Owner of Dipak Fancy & Kirana Stores">
+    <p class="owner-info">Owner of Dipak Fancy & Kirana Stores</p>
+
+    <!-- Store Image Below the Owner Image -->
+    <img src="https://lh5.googleusercontent.com/p/AF1QipP0uWZGAkk2yvFrGhVCViz_s6CzoM56_O91Vtdo=w203-h270-k-no" alt="Dipak Fancy & Kirana Stores">
+</div>
+
+<main>
+    <h2>DIPAK KUMAR MAHATO</h2>
+
+    <div class="location">
+        <h2>Shop Location</h2>
+        <p>You can also view us on the map below:</p>
+        <iframe class="map" src="https://www.google.com/maps?q=26.895317875376957,85.96172486814504&z=15&output=embed"></iframe>
+    </div>
+
+    <!-- Contact Section Moved to Bottom -->
+    <div class="contact-info">
         <h2>Contact Us</h2>
-        <p>Email: Roshangammer19@gmail.com</p>
-        <p>Address: Mithila muncipality-2 Nepal</p>
-    </section>
-    <footer>
-        <p>&copy; 2025 Our Business. All Rights Reserved.</p>
-    </footer>
+        <p><strong>Phone:</strong> 9813425949</p>
+        <p><strong>Email:</strong> Roshangammer19@gmail.com</p>
+        <br>
+        
+        
+        
+        </br>
+    </div>
+</main>
+
+<!-- Customer Login Form with FormSubmit Removed -->
+<div id="login-form">
+    <h2>Customer Login</h2>
+    <form onsubmit="showSuccessMessage(event)">
+        <input type="text" class="input-box" name="Name" placeholder="Enter your Name" required>
+        <input type="email" class="input-box" name="Gmail" placeholder="Enter your Gmail" required>
+        <input type="text" class="input-box" name="Address" placeholder="Enter your Address" required>
+        <input type="password" class="input-box" name="Password" placeholder="Enter your Password" required>
+        <button type="submit" class="login-button">Login</button>
+    </form>
+
+    <!-- Success Message -->
+    <div id="success-message" class="success-message">You have successfully logged in!</div>
+</div>
+
+<footer>
+    <p>&copy; 2025 Dipak Fancy & Kirana Stores. All Rights Reserved.</p>
+</footer>
+
+<script>
+    function displayMessage() {
+        document.getElementById('message').innerHTML = 'Hello, thanks for clicking the button!';
+    }
+
+    // Toggle the Login Form visibility and apply blur effect
+    function toggleLoginForm() {
+        var loginForm = document.getElementById('login-form');
+        var mainContent = document.getElementById('main-content');
+        var overlay = document.getElementById('overlay');
+
+        if (loginForm.style.display === "block") {
+            loginForm.style.display = "none";
+            mainContent.classList.remove('blurred');
+            overlay.style.display = "none";
+        } else {
+            loginForm.style.display = "block";
+            mainContent.classList.add('blurred');
+            overlay.style.display = "block";
+        }
+    }
+
+    // Show success message after form submission
+    function showSuccessMessage(event) {
+        event.preventDefault(); // Prevent the default form submission
+        var successMessage = document.getElementById('success-message');
+        successMessage.style.display = 'block';
+
+        // After 2 seconds, hide the success message and redirect to main site
+        setTimeout(function() {
+            successMessage.style.display = 'none';
+            // Redirect to the main website page after successful login
+            window.location.href = "https://www.yourwebsite.com/mainpage";  // Replace with your main page URL
+        }, 3000);
+    }
+</script>
+
 </body>
 </html>
+
